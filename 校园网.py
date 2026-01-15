@@ -33,8 +33,8 @@ try:
     password_input = wait.until(EC.presence_of_element_located((By.ID, "password")))
 
     # 输入用户名和密码
-    username_input.send_keys("1910600712")
-    password_input.send_keys("07076415")
+    username_input.send_keys("*")
+    password_input.send_keys("*")
 
     # 定位登录按钮并点击
     login_button = wait.until(EC.element_to_be_clickable((By.ID, "login-account")))
@@ -52,4 +52,5 @@ except Exception as e:
 
 finally:
     if driver is not None:
+
         driver.quit()  # 确保浏览器在脚本结束时关闭
